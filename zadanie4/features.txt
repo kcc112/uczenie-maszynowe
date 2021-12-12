@@ -1,0 +1,6 @@
+1. genres - gatunki filmowe
+2. keywords - słowa kluczowe, które wystąpiły w danym filmie
+3. spoken_languages - lista języków, którymi aktorzy posługują się w filmie
+4. budget - budżet filmu
+5. popularity - jak popularny jest dany film
+6. vote_average - średnia ocen filmu

@@ -1,0 +1,4 @@
+venv
+.vscode
+.api-key
+*.zip

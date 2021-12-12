@@ -1,0 +1,6 @@
+1. hamming distance
+2. hamming distance
+3. hamming distance
+4. odległość euklidesowa
+5. odległość euklidesowa
+6. odległość euklidesowa
