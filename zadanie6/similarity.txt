@@ -1,0 +1,2 @@
+Wykorzystano podobieństwo cosinusowe, gdzie liczone jest podobieństwo między danym użytkownikiem
+a każdym innym.

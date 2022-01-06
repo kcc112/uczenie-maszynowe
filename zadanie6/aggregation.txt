@@ -1,0 +1,4 @@
+Stworzenie tabeli, w której kolumny odpowiadają filmom a wiersze użytkownikom. Jeśli dany użytkownik ocenił film
+w kolumnie pod id danego filmu będzie jego ocena a jeśli nie będzie tam wpisana wartość 0. Następnie następuje wyliczenie
+podobieństwa między danym użytkownikiem a całą resztę, posortowanie tych podobieństw i wybranie K najbardziej podobnych użytkowników.
+Na podstawie ocen danego filmu wystawionych przez K najbardziej podobnych użytkowników 
