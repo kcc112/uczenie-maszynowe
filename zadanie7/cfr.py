@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 K = 5
-N_EPOCH = 500
+N = 500
 LEARNING_RATE = 0.001
 
 train = pd.read_csv('train.csv', sep=';', names=["id", "user_id", "movie_id", "rating"])
@@ -22,7 +22,7 @@ users, movies = np.where(np.isnan(ratings_matrix_numpy) == False)
 
 N = len(list(zip(users, movies)))
 
-for epoch in range(N_EPOCH):
+for epoch in range(N):
     for user, movie in zip(users, movies):
         error = np.dot(P[:,user].T, X[:,movie]) - ratings_matrix_numpy[user, movie]
         error = error / K
@@ -36,10 +36,12 @@ for epoch in range(N_EPOCH):
     for user, movie in zip(users, movies):
       val_error += (ratings_matrix_numpy[user, movie] - predictions[user, movie]) ** 2
 
-    print(f'\repoch {epoch + 1}/{N_EPOCH} error {val_error / (2 * N)}', end='\r')
+    print(f'\repoch {epoch + 1}/{N} error {val_error / (2 * N)}', end='\r')
 
 predictions = np.dot(P.T, X)
+
 print(ratings_matrix)
+
 output = pd.DataFrame.from_records(predictions, columns=ratings_matrix.columns)    
 
 print(output)
@@ -51,6 +53,7 @@ for index, row in task.iterrows():
 
   if score < 0:
     score = 0
+
   if score > 5:
     score = 5
 

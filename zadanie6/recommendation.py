@@ -45,7 +45,6 @@ def calculate_rating(row, similar_users, train):
 
     for user_id in similar_users:
         value = users_movie_ratings.loc[(train['user_id'] == user_id), 'rating']
-
         if len(value) > 0:
             ratings.append(value.iloc[0])
 
@@ -64,12 +63,12 @@ rating_matrix = train.pivot(index='user_id', columns='movie_id', values='rating'
 
 rating_matrix = rating_matrix.fillna(0)
 
-print(rating_matrix)
+# print(rating_matrix)
 
-new_df = train.pivot(index='movie_id',columns='user_id',values='rating')
-correlated_users = new_df.corr(method ='pearson')
+# new_df = train.pivot(index='movie_id',columns='user_id',values='rating')
+# correlated_users = new_df.corr(method ='pearson')
 
-print(new_df)
+# print(new_df)
 
 new_task = task.copy()
 
